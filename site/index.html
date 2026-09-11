@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b22" />
+  <title>Heavy Landing · Starship flight simulation</title>
+  <meta name="description" content="Launch Starship, follow Super Heavy back to the tower, and watch the catch. An interactive cinematic flight simulation with WebGPU rocket effects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Heavy Landing" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Heavy Landing · Starship flight simulation" />
+  <meta property="og:description" content="From liftoff to the catch. Launch Starship and follow Super Heavy home in an interactive cinematic flight simulation." />
+  <meta property="og:image" content="https://realcraig.github.io/heavy-landing/assets/social_preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Heavy Landing: Starship lifting off beside its launch tower with a brilliant engine plume." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Heavy Landing · Starship flight simulation" />
+  <meta name="twitter:description" content="From liftoff to the catch. Launch Starship and follow Super Heavy home in an interactive cinematic flight simulation." />
+  <meta name="twitter:image" content="https://realcraig.github.io/heavy-landing/assets/social_preview.png" />
+  <meta name="twitter:image:alt" content="Heavy Landing: Starship lifting off beside its launch tower with a brilliant engine plume." />
+  <script type="module" crossorigin src="/heavy-landing/assets/index-BfNCRs_a.js"></script>
+  <link rel="stylesheet" crossorigin href="/heavy-landing/assets/index-C2rhCTjt.css">
+  <link rel="canonical" href="https://realcraig.github.io/heavy-landing/">
+  <meta property="og:url" content="https://realcraig.github.io/heavy-landing/">
+</head>
+<body>
+<div id="playbot-splash" role="img" aria-label="Made with Playbot">
+  <div class="playbot-signature" aria-hidden="true">
+    <span class="playbot-caption">Made with</span>
+    <div class="playbot-wordmark-row"><img src="/heavy-landing/assets/playbot-mark.svg" width="72" height="72" alt="" /><span class="playbot-wordmark">play.bot</span></div>
+  </div>
+</div>
+<div id="application" inert>
+<main id="game" data-loading aria-label="Starship launch and booster catch simulation"></main>
+<div id="hud">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">H<span>∕</span>L</span><div><strong>HEAVY LANDING</strong><span class="eyebrow">STARSHIP FLIGHT SIMULATION</span></div></div>
+    <div class="top-status"><span class="status-dot"></span><span id="backend">INITIALIZING</span><span class="divider"></span><span>STARBASE, TX</span></div>
+    <div class="header-buttons"><button id="sound" class="icon-button" title="Toggle engine audio" aria-label="Enable engine audio">SOUND OFF</button><button id="hide-hud" class="icon-button" title="Hide interface · H" aria-label="Hide interface">HIDE UI ↗</button></div>
+  </header>
+  <section class="mission-card"><div class="eyebrow"><span class="live-dot"></span><span id="flight-label">FLIGHT 01 / ON THE PAD</span></div><h1 id="phase-title">Ready for flight.</h1><p id="phase-detail">From liftoff to the catch.<br>Follow Super Heavy home.</p><button id="launch" class="primary" disabled><span>LOADING VEHICLE</span><span>↗</span></button><div id="loading-progress"><span></span></div><span class="micro" id="mission-note">Cinematic mission · illustrative trajectory</span></section>
+  <aside class="telemetry"><div class="eyebrow">SUPER HEAVY <span class="live-dot"></span></div><div class="metric"><span>ALTITUDE</span><strong id="altitude">0.000<small>km</small></strong><div class="metric-line"><i id="altitude-bar"></i></div></div><div class="metric"><span>VELOCITY</span><strong id="velocity">0<small>km/h</small></strong><div class="metric-line"><i id="velocity-bar"></i></div></div><div class="engine-heading"><span>RAPTOR ARRAY</span><b id="engine-count">00 / 33</b></div><svg id="engine-map" viewBox="0 0 100 100" aria-label="Active booster engines"></svg><div class="telemetry-foot"><span>THROTTLE</span><b id="throttle">0%</b></div></aside>
+  <div class="camera-label"><span class="bracket">⌖</span><span id="camera-label">PAD ORBIT</span><span class="camera-rule"></span><span id="camera-hint">DRAG TO LOOK · SCROLL TO ZOOM</span></div>
+  <footer class="flight-deck"><div class="deck-top"><div class="mission-clock"><span id="time-prefix">T −</span><b id="mission-time">00:10</b></div><div class="transport"><button id="play" class="control" disabled aria-label="Pause simulation">Ⅱ</button><button id="restart" class="control" aria-label="Reset simulation" title="Restart · R">↺</button><span class="divider"></span><button id="speed" class="text-control" title="Change playback speed">3× SPEED</button><button id="camera" class="text-control" title="Toggle automatic camera · C">AUTO CAMERA</button></div><div class="deck-caption" id="sequence-status">AWAITING LAUNCH</div></div><input id="timeline" type="range" min="-10" max="435" step="0.1" value="-10" aria-label="Mission timeline" disabled/><div class="phase-markers"><button data-time="0">01 <span>LIFTOFF</span></button><button data-time="163">02 <span>HOT STAGING</span></button><button data-time="185">03 <span>BOOSTBACK</span></button><button data-time="350">04 <span>RETURN</span></button><button data-time="402">05 <span>TOWER CATCH</span></button></div></footer>
+  <div id="error" role="alert" hidden></div>
+</div>
+<button id="show-hud" hidden aria-label="Show interface">SHOW UI</button>
+</div>
+</body></html>
